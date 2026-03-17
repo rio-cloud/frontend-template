@@ -1,0 +1,28 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [],
+    "commitMessagePrefix": "Renovate:",
+    "schedule": [],
+    "timezone": "Europe/Berlin",
+    "prConcurrentLimit": 1,
+    "ignorePaths": [],
+    "ignoreDeps": [
+        "@types/node", // We want to control when we upgrade node versions (and types)
+    ],
+    "packageRules": [
+        {
+            "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"],
+            "allowedVersions": "<=18"
+        },
+        {
+            // react-intl 8 requires react 19
+            "matchPackageNames": ["react-intl"],
+            "allowedVersions": "<=7"
+        },
+        {
+            "matchPackageNames": ["typescript"],
+            "allowedVersions": "<6.0.0",
+            "description": ["Contains numerous of breaking changes, do the upgrade in a dedicated ticket after CoP FE has shared learnings"]
+        }
+    ]
+}
