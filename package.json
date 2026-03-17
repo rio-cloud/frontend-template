@@ -32,7 +32,6 @@
         "@rio-cloud/rio-uikit": "2.2.0",
         "@rio-cloud/rio-user-menu-component": "4.0.0",
         "@sentry/browser": "10.42.0",
-        "events": "3.3.0",
         "iframe-resizer-react": "1.1.1",
         "lodash": "4.17.23",
         "oidc-client-ts": "3.4.1",
