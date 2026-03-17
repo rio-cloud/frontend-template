@@ -1,4 +1,7 @@
-# RIO Frontend template
+<h1>
+  <img src="https://cdn.rio.cloud/images/favicon/apple-touch-icon.png" alt="RIO logo" width="28" />
+  RIO Frontend template
+</h1>
 
 ## Summary
 
