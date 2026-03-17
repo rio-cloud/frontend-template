@@ -1,5 +1,4 @@
 import type { ErrorEvent, EventHint } from '@sentry/core';
-import { cloneDeep } from 'lodash';
 
 import { config } from '../../../config';
 import { filterSentryEvent } from '../sentry';
@@ -17,7 +16,7 @@ describe('filterSentryEvent', () => {
 
     it('does not touch any values for unfiltered events', () => {
         // given
-        const event = cloneDeep(errorEventTemplate);
+        const event = structuredClone(errorEventTemplate);
 
         // when
         const result = filterSentryEvent(event, {});
@@ -38,7 +37,7 @@ describe('filterSentryEvent', () => {
 
     it.each(IGNORED_TYPE_ERRORS)('should filter out ignored errors', errorMessage => {
         // given
-        const event = cloneDeep(errorEventTemplate);
+        const event = structuredClone(errorEventTemplate);
         const hint: EventHint = { originalException: new TypeError(errorMessage) };
 
         // when
@@ -50,7 +49,7 @@ describe('filterSentryEvent', () => {
 
     it('should filter out Outlook link scanning errors', () => {
         // given
-        const event = cloneDeep(errorEventTemplate);
+        const event = structuredClone(errorEventTemplate);
         event.exception = {
             values: [
                 {
@@ -73,7 +72,7 @@ describe('filterSentryEvent', () => {
         const redirectURL = `${config.login.redirectUri}?code=sensitive-code&state=sensitive-state&session_state=sensitive-session-state`;
         vi.spyOn(window, 'location', 'get').mockReturnValue({ href: redirectURL } as Location);
 
-        const event = cloneDeep(errorEventTemplate);
+        const event = structuredClone(errorEventTemplate);
         const truncatedURL = `${
             // biome-ignore lint/style/noNonNullAssertion: It's there. Trust me, Bro.
             redirectURL.substring(0, config.login.redirectUri!.length + 20)
@@ -86,7 +85,7 @@ describe('filterSentryEvent', () => {
         const result = filterSentryEvent(event, hint);
 
         // then
-        const expectedEvent = cloneDeep(errorEventTemplate);
+        const expectedEvent = structuredClone(errorEventTemplate);
         expectedEvent.request = {
             url: `${config.login.redirectUri}?code=%5BFiltered+by+client%5D&state=%5BFiltered+by+client%5D&session_state=%5BFiltered+by+client%5D`,
         };

@@ -1,4 +1,3 @@
-import join from 'lodash/fp/join';
 import {
     ErrorResponse,
     InMemoryWebStorage,
@@ -42,7 +41,7 @@ export const getUserManagerSettings = (): UserManagerSettings => {
         loadUserInfo: false,
         redirect_uri: `${redirectUri}`,
         response_type: 'code',
-        scope: join(' ', config.login.oauthScope),
+        scope: config.login.oauthScope.join(' '),
         silent_redirect_uri: `${silentRedirectUri || redirectUri}`,
         includeIdTokenInSilentRenew: false,
         automaticSilentRenew: true,
