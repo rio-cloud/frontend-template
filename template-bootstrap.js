@@ -1,3 +1,9 @@
+/**
+ * This file is only used during project creation with RIO's create-frontend CLI.
+ * The CLI removes this file at the end of the setup process.
+ * If you do not use the CLI, you can remove this file manually.
+ */
+
 import { readFile, writeFile } from 'node:fs/promises';
 import { parseArgs } from 'node:util';
 
