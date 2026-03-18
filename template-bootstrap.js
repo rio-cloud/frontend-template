@@ -1,9 +1,8 @@
-/**
+/*
  * This file is only used during project creation with RIO's create-frontend CLI.
- * The CLI removes this file at the end of the setup process.
- * If you do not use the CLI, you can remove this file manually.
+ *
+ * The CLI removes this file at the end of the setup process. If you do not use the CLI, remove this file manually.
  */
-
 import { readFile, writeFile } from 'node:fs/promises';
 import { parseArgs } from 'node:util';
 
@@ -44,10 +43,11 @@ if (missingArgs.length > 0) {
     console.error(usageMessage);
     process.exit(1);
 }
+
 await updatePackageJson(values.appName);
 await updateIndexHtml(values.appName);
-
 await updateProductionEnv(values.clientId, values.redirectUri, values.sentryDsn);
+await updateLicenseYear();
 
 console.log('Configuration updated successfully.');
 
@@ -73,6 +73,15 @@ async function updateIndexHtml(appName) {
     }
 
     await writeFile(indexHtmlPath, updatedHtml, 'utf8');
+}
+
+function escapeHtml(value) {
+    return value
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
 }
 
 async function updateProductionEnv(clientId, redirectUri, sentryDsn) {
@@ -105,11 +114,17 @@ function escapeRegex(value) {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function escapeHtml(value) {
-    return value
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;');
+async function updateLicenseYear() {
+    const licensePath = new URL('./LICENSE', import.meta.url);
+    const license = await readFile(licensePath, 'utf8');
+    const currentYear = new Date().getFullYear().toString();
+    const copyrightPattern = /^(Copyright \(c\) )\d{4}(\s+.*)$/m;
+
+    if (!copyrightPattern.test(license)) {
+        throw new Error('Could not find copyright year in LICENSE');
+    }
+
+    const updatedLicense = license.replace(copyrightPattern, (_, prefix, suffix) => `${prefix}${currentYear}${suffix}`);
+
+    await writeFile(licensePath, updatedLicense, 'utf8');
 }
