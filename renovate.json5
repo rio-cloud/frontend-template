@@ -18,11 +18,6 @@
             // react-intl 8 requires react 19
             "matchPackageNames": ["react-intl"],
             "allowedVersions": "<=7"
-        },
-        {
-            "matchPackageNames": ["typescript"],
-            "allowedVersions": "<6.0.0",
-            "description": ["Contains numerous of breaking changes, do the upgrade in a dedicated ticket after CoP FE has shared learnings"]
         }
     ]
 }
