@@ -63,7 +63,7 @@
         "playwright": "1.58.2",
         "rimraf": "6.1.3",
         "rollup-plugin-visualizer": "7.0.1",
-        "typescript": "5.9.3",
+        "typescript": "6.0.1-rc",
         "vite": "8.0.0",
         "vitest": "4.1.0",
         "vitest-fetch-mock": "0.4.5"
@@ -76,6 +76,7 @@
         "workerDirectory": "public"
     },
     "overrides": {
-        "iframe-resizer": "4.3.11"
+        "iframe-resizer": "4.3.11",
+        "typescript": "6.0.1-rc"
     }
 }
