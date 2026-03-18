@@ -17,10 +17,10 @@ export default defineConfig({
     build: {
         outDir: 'build',
         sourcemap: true,
-        rollupOptions: {
+        rolldownOptions: {
             output: {
-                manualChunks: {
-                    'vendor.common': ['@sentry/browser', 'framer-motion', 'oidc-client-ts'],
+                codeSplitting: {
+                    groups: [{ test: /@sentry\/browser|framer-motion|oidc-client-ts/, name: 'vendor.common' }],
                 },
             },
         },
