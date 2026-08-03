@@ -47,7 +47,6 @@ if (missingArgs.length > 0) {
 await updatePackageJson(values.appName);
 await updateIndexHtml(values.appName);
 await updateProductionEnv(values.clientId, values.redirectUri, values.sentryDsn);
-await updateLicenseYear();
 
 console.log('Configuration updated successfully.');
 
@@ -112,19 +111,4 @@ function setEnvValue(content, key, value) {
 
 function escapeRegex(value) {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-async function updateLicenseYear() {
-    const licensePath = new URL('./LICENSE', import.meta.url);
-    const license = await readFile(licensePath, 'utf8');
-    const currentYear = new Date().getFullYear().toString();
-    const copyrightPattern = /^(Copyright \(c\) )\d{4}(\s+.*)$/m;
-
-    if (!copyrightPattern.test(license)) {
-        throw new Error('Could not find copyright year in LICENSE');
-    }
-
-    const updatedLicense = license.replace(copyrightPattern, (_, prefix, suffix) => `${prefix}${currentYear}${suffix}`);
-
-    await writeFile(licensePath, updatedLicense, 'utf8');
 }
