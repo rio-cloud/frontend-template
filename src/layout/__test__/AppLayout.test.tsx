@@ -16,7 +16,7 @@ describe('Test AppLayout', () => {
         expect(await findByTestId('app-layout')).toBeInTheDocument();
         const iframeResizer = await findByTestId('MockComponent-IframeResizer');
         expect(iframeResizer).toHaveTextContent('"className":"iFrameResizer"');
-        expect(iframeResizer).toHaveTextContent('"title":"RIO menu"');
+        expect(iframeResizer).not.toHaveTextContent('"title"');
         expect(iframeResizer).not.toHaveTextContent('"direction"');
         expect(iframeResizer).not.toHaveTextContent('"protocol"');
     });
