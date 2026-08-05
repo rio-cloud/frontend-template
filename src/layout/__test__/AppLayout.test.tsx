@@ -1,20 +1,24 @@
-import { screen } from '@testing-library/react';
-
 import MockComponent from '../../__test__/MockComponent';
 import { testRender } from '../../__test__/testUtils';
 import type { RootState } from '../../configuration/setup/store';
 import messagesDE from '../../features/translations/de-DE.json';
 import AppLayout from '../AppLayout';
 
-vi.mock('iframe-resizer-react', () => ({
+vi.mock('@rio-cloud/iframe-resizer', () => ({
     // @ts-expect-error Several components on this level are using the iframe-resizer
     default: props => <MockComponent name='IframeResizer' data={props} />,
 }));
 
 describe('Test AppLayout', () => {
     it('Application layout is rendered', async () => {
-        testRender(<AppLayout />);
-        expect(await screen.findByTestId('app-layout')).toBeInTheDocument();
+        const { findByTestId } = testRender(<AppLayout />);
+
+        expect(await findByTestId('app-layout')).toBeInTheDocument();
+        const iframeResizer = await findByTestId('MockComponent-IframeResizer');
+        expect(iframeResizer).toHaveTextContent('"className":"iFrameResizer"');
+        expect(iframeResizer).toHaveTextContent('"title":"RIO menu"');
+        expect(iframeResizer).not.toHaveTextContent('"direction"');
+        expect(iframeResizer).not.toHaveTextContent('"protocol"');
     });
 
     it('Application layout renders with a preloaded store', async () => {
@@ -29,9 +33,9 @@ describe('Test AppLayout', () => {
             },
         };
 
-        testRender(<AppLayout />, preloadedState);
+        const { findByTestId, getByText } = testRender(<AppLayout />, preloadedState);
 
-        expect(await screen.findByTestId('app-layout')).toBeInTheDocument();
-        expect(screen.getByText('Introduction')).toBeInTheDocument();
+        expect(await findByTestId('app-layout')).toBeInTheDocument();
+        expect(getByText('Introduction')).toBeInTheDocument();
     });
 });

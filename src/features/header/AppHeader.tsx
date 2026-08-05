@@ -1,7 +1,7 @@
+import IframeResizer from '@rio-cloud/iframe-resizer';
 import { RioNotifications } from '@rio-cloud/rio-notifications-component';
 import ApplicationHeader from '@rio-cloud/rio-uikit/ApplicationHeader';
 import { DefaultUserMenu } from '@rio-cloud/rio-user-menu-component';
-import IframeResizer from 'iframe-resizer-react';
 import { FormattedMessage } from 'react-intl';
 import { Link, NavLink } from 'react-router';
 

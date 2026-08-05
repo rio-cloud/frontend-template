@@ -1,3 +1,4 @@
+import '@rio-cloud/iframe-resizer/child';
 import { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { IntlProvider } from 'react-intl';

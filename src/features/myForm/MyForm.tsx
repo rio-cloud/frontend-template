@@ -1,4 +1,5 @@
 import ClearableInput from '@rio-cloud/rio-uikit/ClearableInput';
+import Icon from '@rio-cloud/rio-uikit/Icon';
 import Select from '@rio-cloud/rio-uikit/Select';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -69,7 +70,7 @@ const MyForm = () => {
                     />
                     {errors.name && (
                         <>
-                            <span className='form-control-feedback rioglyph rioglyph-error-sign' />
+                            <Icon className='form-control-feedback' iconName='error-sign' />
                             <span className='help-block'>
                                 <span>Name is required</span>
                             </span>
@@ -95,7 +96,7 @@ const MyForm = () => {
                     />
                     {errors.email && (
                         <>
-                            <span className='form-control-feedback rioglyph rioglyph-error-sign' />
+                            <Icon className='form-control-feedback' iconName='error-sign' />
                             <span className='help-block'>
                                 <span>E-Mail is not valid</span>
                             </span>

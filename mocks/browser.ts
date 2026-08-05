@@ -12,8 +12,7 @@ const isDefault = ({ pathname, href }: URL) =>
     href.startsWith('https://uikit.developers.rio.cloud') ||
     href.includes('.hereapi.com/') ||
     href.includes('api.here.com/') ||
-    href.includes('.configcat.com/') ||
-    href.endsWith('iframeResizer.contentWindow.min.js');
+    href.includes('.configcat.com/');
 
 export const startWorker = () =>
     worker.start({

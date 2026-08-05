@@ -1,4 +1,5 @@
 import ActionBarItem from '@rio-cloud/rio-uikit/ActionBarItem';
+import Icon from '@rio-cloud/rio-uikit/Icon';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router';
 
@@ -17,14 +18,14 @@ const ServiceInfo = () => {
     return (
         <ActionBarItem id='serviceInfo' className='myItem'>
             <ActionBarItem.Icon>
-                <span className='icon rioglyph rioglyph-info-sign' />
+                <Icon iconName='info-sign' />
             </ActionBarItem.Icon>
             <ActionBarItem.Popover title={title}>
                 <ActionBarItem.List>
-                    <ActionBarItem.ListItem icon='rioglyph-hand-right' onClick={handleClick}>
+                    <ActionBarItem.ListItem iconName='hand-right' onClick={handleClick}>
                         Release notes
                     </ActionBarItem.ListItem>
-                    <ActionBarItem.ListItem icon='rioglyph-exclamation-sign'>
+                    <ActionBarItem.ListItem iconName='exclamation-sign'>
                         <Link to='/abcd'>Link</Link>
                     </ActionBarItem.ListItem>
                 </ActionBarItem.List>
