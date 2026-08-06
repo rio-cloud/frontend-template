@@ -27,7 +27,7 @@
     "dependencies": {
         "@redux-devtools/extension": "4.0.0",
         "@reduxjs/toolkit": "2.12.0",
-        "@rio-cloud/iframe-resizer": "1.1.0",
+        "@rio-cloud/iframe-resizer": "1.1.1",
         "@rio-cloud/rio-notifications-component": "1.0.0",
         "@rio-cloud/rio-session-expired-info": "2.0.0",
         "@rio-cloud/rio-uikit": "3.0.0-beta.1",
