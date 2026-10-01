@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "composite": true,
-        "resolveJsonModule": true
+        "module": "esnext",
+        "moduleResolution": "bundler"
     },
     "include": ["vite.config.ts", "src/__test__/globalSetup.ts"]
 }

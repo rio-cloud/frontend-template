@@ -23,7 +23,7 @@ const App = () => {
     useEffect(() => {
         const language = extractLanguage(userLocale);
         const htmlElement = document.documentElement;
-        if (!!language && htmlElement.getAttribute('lang') !== language) {
+        if (language && htmlElement.getAttribute('lang') !== language) {
             htmlElement.setAttribute('lang', language);
         }
     }, [userLocale]);

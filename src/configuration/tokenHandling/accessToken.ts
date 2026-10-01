@@ -22,7 +22,7 @@ export const configureStorage = () => {
 };
 
 export const extractAccessTokenFromWindowLocation = (window?: Window) => {
-    if (!window || !window.location || !window.location.href || typeof window.location.href !== 'string') {
+    if (!window?.location?.href || typeof window.location.href !== 'string') {
         return;
     }
 

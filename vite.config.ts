@@ -4,14 +4,14 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { loadEnv } from 'vite';
 import { defineConfig } from 'vitest/config';
 
-import { version } from './package.json';
+import packageJson from './package.json' with { type: 'json' };
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react(), visualizer({ filename: 'results/stats.html' }), rioLicenseCheck()],
 
     define: {
-        APP_VERSION: JSON.stringify(version),
+        APP_VERSION: JSON.stringify(packageJson.version),
     },
 
     build: {

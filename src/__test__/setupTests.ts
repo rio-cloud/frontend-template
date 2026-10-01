@@ -1,7 +1,5 @@
-import * as matchers from '@testing-library/jest-dom/matchers';
+import '@testing-library/jest-dom/vitest';
 import createFetchMock from 'vitest-fetch-mock';
-
-expect.extend(matchers);
 
 // Let the UIKIT components (like the tooltip) recognize the test as being from desktop since
 // tooltips are not displayed on mobile.
