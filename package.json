@@ -22,7 +22,8 @@
         "pull-translations": "phrase pull --access_token $PHRASEAPP_ACCESS_TOKEN && node mergeTranslations.js",
         "test-integration": "npx playwright test",
         "test-integration-ci": "npx playwright install --with-deps && npm run test-integration",
-        "test-integration-open": "npx playwright test --ui"
+        "test-integration-open": "npx playwright test --ui",
+        "i18n-flow": "i18n-flow"
     },
     "dependencies": {
         "@redux-devtools/extension": "4.0.0",
@@ -44,6 +45,7 @@
         "react-router-dom": "7.18.4"
     },
     "devDependencies": {
+        "@rio-cloud/i18n": "0.12.0",
         "@biomejs/biome": "2.5.14",
         "@playwright/test": "1.63.0",
         "@rio-cloud/audit-filter": "2.0.1",

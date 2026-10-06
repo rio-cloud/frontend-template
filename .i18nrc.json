@@ -1,0 +1,60 @@
+{
+    "platform": "web",
+    "prefix": "intl-msg:",
+    "sourceLocale": "en-GB",
+    "sourceFile": "src/features/translations/en-GB.json",
+    "targetLocales": [
+        "bg-BG",
+        "cs-CZ",
+        "da-DK",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "et-EE",
+        "fi-FI",
+        "fr-FR",
+        "hr-HR",
+        "hu-HU",
+        "it-IT",
+        "ko-KR",
+        "lt-LT",
+        "lv-LV",
+        "nb-NO",
+        "nl-NL",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "sk-SK",
+        "sl-SI",
+        "sv-SE"
+    ],
+    "targetPathPattern": "src/features/translations/{locale}.json",
+    "stateFile": ".i18n/state.json",
+    "catalog": {
+        "url": "ssh://git@bitbucket.collaboration-man.com:7999/riofront/i18n-catalog.git"
+    },
+    "contextPaths": [
+        ".i18n/context/project.md"
+    ],
+    "translation": {
+        "batchSize": 80,
+        "deltaLocalesPerCall": 6,
+        "maxParallelLocales": 4
+    },
+    "ai": {
+        "runner": "codex-cli",
+        "command": "codex",
+        "model": "gpt-6-luna",
+        "reasoningEffort": "medium",
+        "sandbox": "read-only",
+        "timeoutMs": 600000
+    },
+    "jsonIndent": 4,
+    "sortKeys": false,
+    "newlineAtEnd": true,
+    "checks": {
+        "protectedTerms": "contextual"
+    },
+    "ignoredKeys": []
+}
