@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "오, 이런! 문제가 발생했습니다.",
-    "intl-msg:common-message.error.generic.message": "데이터를로드 할 수 없습니다. 다시 시도하십시오.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "다시 시도하십시오. 오류가 반복적으로 나타나면 RIO 고객 지원 팀에 문의하십시오."
+    "intl-msg:common-message.error.generic.headline": "이런! 문제가 발생했습니다.",
+    "intl-msg:common-message.error.generic.message": "데이터를 불러오지 못했습니다. 다시 시도해 주세요.",
+    "intl-msg:starterTemplate.moduleName": "시작 템플릿",
+    "intl-msg:starterTemplate.sublink.more": "더 보기",
+    "intl-msg:starterTemplate.sublink.intro": "소개"
 }

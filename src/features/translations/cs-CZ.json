@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "Ale ne! Něco se pokazlo.",
-    "intl-msg:common-message.error.generic.message": "Data nelze načíst. Opakujte akci.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "Opakujte akci. Pokud se chyba objevuje opakovaně, obraťte se na tým podpory zákazníků RIO."
+    "intl-msg:common-message.error.generic.headline": "Ale ne! Něco se pokazilo.",
+    "intl-msg:common-message.error.generic.message": "Nepodařilo se načíst vaše data. Zkuste to prosím znovu.",
+    "intl-msg:starterTemplate.moduleName": "Úvodní šablona",
+    "intl-msg:starterTemplate.sublink.more": "Více",
+    "intl-msg:starterTemplate.sublink.intro": "Úvod"
 }

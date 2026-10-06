@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "Oh Snap! Jokin meni pieleen.",
+    "intl-msg:common-message.error.generic.headline": "Voi ei! Jotain meni pieleen.",
     "intl-msg:common-message.error.generic.message": "Emme voineet ladata tietojasi. Yritä uudelleen.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "Yritä uudelleen. Jos virhe ilmestyy toistuvasti, ota yhteyttä Rion asiakas tukeen."
+    "intl-msg:starterTemplate.moduleName": "Aloitusmalli",
+    "intl-msg:starterTemplate.sublink.more": "Lisää",
+    "intl-msg:starterTemplate.sublink.intro": "Johdanto"
 }

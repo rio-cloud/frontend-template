@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "Oh, pucketaj! Nešto je pošlo po zlu.",
-    "intl-msg:common-message.error.generic.message": "Nismo mogli učitati vaše podatke. Molim vas pokušajte ponovo.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "Molim vas pokušajte ponovo. Ako se pogreška više puta pojavi, obratite se timu za korisničku podršku u Riu."
+    "intl-msg:common-message.error.generic.headline": "O ne! Došlo je do pogreške.",
+    "intl-msg:common-message.error.generic.message": "Nismo mogli učitati vaše podatke. Pokušajte ponovno.",
+    "intl-msg:starterTemplate.moduleName": "Početni predložak",
+    "intl-msg:starterTemplate.sublink.more": "Više",
+    "intl-msg:starterTemplate.sublink.intro": "Uvod"
 }

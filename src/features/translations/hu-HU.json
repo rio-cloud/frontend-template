@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "Oh snap! Valami elromlott.",
-    "intl-msg:common-message.error.generic.message": "Nem tudtuk betölteni az adatokat. Próbálkozzunk újra.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "Próbálkozzunk újra. Ha a hiba ismételten megjelenik, kérjük, forduljon a RIO ügyfélszolgálati csapathoz."
+    "intl-msg:common-message.error.generic.headline": "Jaj, valami hiba történt.",
+    "intl-msg:common-message.error.generic.message": "Nem tudtuk betölteni az adataidat. Próbáld újra.",
+    "intl-msg:starterTemplate.moduleName": "Kezdősablon",
+    "intl-msg:starterTemplate.sublink.more": "Továbbiak",
+    "intl-msg:starterTemplate.sublink.intro": "Bevezetés"
 }

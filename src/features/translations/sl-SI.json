@@ -1,5 +1,7 @@
 {
-    "intl-msg:common-message.error.generic.headline": "Oh, Presneto! Nekaj je šlo narobe.",
-    "intl-msg:common-message.error.generic.message": "Podatkov nismo mogli naložiti. Prosim, poskusite znova.",
-    "intl-msg:common-message.error.generic.retryOrSupport": "Prosim, poskusite znova. Če se napaka ponavlja, se obrnite na ekipo za podporo strankam RIO."
+    "intl-msg:common-message.error.generic.headline": "Ups! Nekaj je šlo narobe.",
+    "intl-msg:common-message.error.generic.message": "Podatkov nismo mogli naložiti. Poskusite znova.",
+    "intl-msg:starterTemplate.moduleName": "Začetna predloga",
+    "intl-msg:starterTemplate.sublink.more": "Več",
+    "intl-msg:starterTemplate.sublink.intro": "Uvod"
 }
