@@ -91,7 +91,7 @@ else, feel free to remove or adapt the sample implementations.
       both development and testing
 - *Localization*:
     - [react-intl](https://formatjs.io/docs/react-intl/) as the i18n library
-    - [Phrase](https://phrase.com/cli/) for managing translations with Phrase
+    - [@rio-cloud/i18n](https://www.npmjs.com/package/@rio-cloud/i18n) for managing translations
 - *Service monitoring and issue tracking*:
     - [Sentry](https://sentry.io/)
 - *Static code analysis and formatting*:
