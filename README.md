@@ -21,6 +21,9 @@ creation. In particular, make sure you provide values for:
 
 If you only want a small local toy project that lets you explore UIKIT components, dummy values are sufficient.
 
+📝 After your project has been set up initially, make sure to check your [translation config](./.i18nrc.json) and update
+it if needed regarding your desired agent, model, and reasoning model.
+
 Once that is done, remove this section and replace it with your own project-specific README 🦄
 
 _Note, even though it is technically ignored, please make sure to update the list of OAuth scopes in [src/config.ts](src/config.ts)._
